@@ -13,6 +13,7 @@ const Navbar = ({ onJoinClick }) => {
     { label: 'Chapters', href: '/chapters' },
     { label: 'Specialities', href: '/specialties' },
     { label: 'Membership', href: '/membership-info' },
+    { label: 'News & Events', href: '/news-events' },
     { label: 'Donate', href: 'https://charitystack.com/donate/2b78c2eb-b329-4f23-a4e3-61088b0e1bde' },
     { label: 'Contact', href: '/contact' }
   ];

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/NewLanding/Navbar';
 import Hero from '../components/NewLanding/Hero';
-import Membership from '../components/NewLanding/Membership';
+import Partnerships from '../components/NewLanding/Partnerships';
 import Footer from '../components/NewLanding/Footer';
 
 const NewLanding = () => {
@@ -19,8 +19,9 @@ const NewLanding = () => {
   return (
     <div className="bg-white font-sans min-h-screen">
       <Navbar onJoinClick={() => handleJoinClick()} />
-      <main className="flex flex-col gap-[clamp(60px,8vw,100px)]">
+      <main className="flex flex-col">
         <Hero onJoinClick={handleBecomeMemberClick} />
+        <Partnerships />
       </main>
       <Footer />
     </div>
