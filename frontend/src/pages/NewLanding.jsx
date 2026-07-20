@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/NewLanding/Navbar';
 import Hero from '../components/NewLanding/Hero';
-import Partnerships from '../components/NewLanding/Partnerships';
 import Footer from '../components/NewLanding/Footer';
 
 const NewLanding = () => {
@@ -21,7 +20,7 @@ const NewLanding = () => {
       <Navbar onJoinClick={() => handleJoinClick()} />
       <main className="flex flex-col">
         <Hero onJoinClick={handleBecomeMemberClick} />
-        <Partnerships />
+        
       </main>
       <Footer />
     </div>
