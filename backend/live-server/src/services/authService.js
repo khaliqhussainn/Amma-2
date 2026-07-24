@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const UserModel = require('../models/userModel');
 const AppError = require('../utils/AppError');
 const sendEmail = require('../utils/sendEmail');
+const BrevoService = require('./brevoService');
 
 class AuthService {
     static generateToken(id, remember = false) {
@@ -76,7 +77,12 @@ class AuthService {
         }
 
         const fullUser = await UserModel.findById(newUserId);
-        
+
+        // Synchronize new member to Brevo in the background (non-blocking)
+        BrevoService.syncContact(fullUser).catch(err => {
+            console.error('[Brevo Async Error]:', err.message);
+        });
+
         // Don't issue token if pending
         const token = (fullUser.role === 'ADMIN' || fullUser.status === 'APPROVED') 
             ? this.generateToken(newUserId) 

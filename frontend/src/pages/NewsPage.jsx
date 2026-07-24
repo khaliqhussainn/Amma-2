@@ -39,23 +39,25 @@ const NewsPage = () => {
                 AMMA Press Room
               </span>
               <h1 className="text-[clamp(36px,5vw,56px)] font-display font-extrabold tracking-tight leading-none">
-                News &amp; Updates
+                News &amp; Events
               </h1>
               <p className="text-white/70 text-body-md font-medium max-w-2xl">
-                Stay informed with the latest announcements, clinical insights, humanitarian mission reports, and chapter activities.
+                Stay informed with the latest announcements, clinical insights, humanitarian mission reports, and upcoming AMMA events.
               </p>
-            </div>
-
-            {/* Search Input */}
-            <div className="w-full md:w-80 relative">
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full h-12 pl-12 pr-6 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:bg-white focus:text-[#042C53] focus:placeholder-gray-400 focus:ring-4 focus:ring-white/10 transition-all text-sm font-sans"
-              />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none group-focus-within:text-gray-400" size={18} />
+              <div className="flex items-center gap-2 pt-2">
+                <button
+                  onClick={() => navigate('/news-events?tab=news')}
+                  className="py-2 px-5 rounded-full font-sans font-bold text-sm cursor-pointer transition-all duration-200 border bg-white text-[#042C53] border-white shadow-md"
+                >
+                  News &amp; Updates
+                </button>
+                <button
+                  onClick={() => navigate('/news-events?tab=events')}
+                  className="py-2 px-5 rounded-full font-sans font-bold text-sm cursor-pointer transition-all duration-200 border bg-white/10 text-white/80 border-white/20 hover:bg-white/20"
+                >
+                  Upcoming Events
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -63,18 +65,20 @@ const NewsPage = () => {
         {/* Categories Bar */}
         <section className="border-b border-[#F2F2F7] bg-white sticky top-[80px] z-50 py-4 px-[4%]">
           <div className="max-w-container-max mx-auto px-md flex gap-2 overflow-x-auto hide-scrollbar">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`py-2 px-6 rounded-full font-sans font-bold text-sm cursor-pointer transition-all shrink-0 border border-transparent ${selectedCategory === cat
-                  ? 'bg-[#042C53] text-white shadow-sm'
-                  : 'bg-gray-100 hover:bg-gray-200 text-[#333333]'
-                  }`}
-              >
-                {cat}
-              </button>
-            ))}
+            <div className="flex gap-2" style={{ opacity: 1 }}>
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`py-2 px-6 rounded-full font-sans font-bold text-sm cursor-pointer transition-all shrink-0 border border-transparent ${selectedCategory === cat
+                    ? 'bg-[#042C53] text-white shadow-sm'
+                    : 'bg-gray-100 hover:bg-gray-200 text-[#333333]'
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -220,12 +224,14 @@ const NewsPage = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="text-center py-20 bg-white rounded-3xl border border-outline-variant/10 shadow-sm"
+                    style={{ opacity: 1 }}
                   >
-                    <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-4" strokeWidth={1.5} />
-                    <h3 className="font-display font-bold text-xl text-[#042C53] mb-2">No Articles Found</h3>
-                    <p className="text-gray-500 font-sans text-sm max-w-sm mx-auto">
-                      We couldn't find any news articles matching your search query or selected category.
-                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 text-gray-300 mx-auto mb-4">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path d="M22 3h-6a4 4 0 0 1 3-3h7z"></path>
+                    </svg>
+                    <h3 className="font-display font-bold text-xl text-[#042C53] mb-2">No news available</h3>
+                    <p className="text-gray-500 font-sans text-sm mx-auto">There are currently no news items available.</p>
                   </motion.div>
                 )}
               </AnimatePresence>

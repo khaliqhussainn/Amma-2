@@ -21,8 +21,8 @@ const CategoryPill = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
     className={`py-2 px-6 rounded-full font-sans font-bold text-sm cursor-pointer transition-all shrink-0 border border-transparent ${active
-        ? 'bg-[#042C53] text-white shadow-sm'
-        : 'bg-gray-100 hover:bg-gray-200 text-[#333333]'
+      ? 'bg-[#042C53] text-white shadow-sm'
+      : 'bg-gray-100 hover:bg-gray-200 text-[#333333]'
       }`}
   >
     {label}
@@ -109,9 +109,8 @@ const EventCard = ({ event, onViewDetails }) => {
           {event.isVirtual ? <Video size={11} /> : null}
           {event.category}
         </span>
-        <span className={`absolute top-4 right-4 text-white py-1 px-3 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm ${
-          isPast ? 'bg-gray-500/90' : 'bg-emerald-600/90'
-        }`}>
+        <span className={`absolute top-4 right-4 text-white py-1 px-3 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm ${isPast ? 'bg-gray-500/90' : 'bg-emerald-600/90'
+          }`}>
           {isPast ? 'Completed' : 'Upcoming'}
         </span>
       </div>
@@ -242,8 +241,8 @@ const NewsEventsPage = () => {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`py-2 px-5 rounded-full font-sans font-bold text-sm cursor-pointer transition-all duration-200 border ${activeTab === tab.id
-                        ? 'bg-white text-[#042C53] border-white shadow-md'
-                        : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20'
+                      ? 'bg-white text-[#042C53] border-white shadow-md'
+                      : 'bg-white/10 text-white/80 border-white/20 hover:bg-white/20'
                       }`}
                   >
                     {tab.label}
@@ -361,10 +360,13 @@ const NewsEventsPage = () => {
                           animate={{ opacity: 1 }}
                           className="text-center py-20 bg-white rounded-3xl border border-outline-variant/10 shadow-sm"
                         >
-                          <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-4" strokeWidth={1.5} />
-                          <h3 className="font-display font-bold text-xl text-[#042C53] mb-2">No Articles Found</h3>
-                          <p className="text-gray-500 font-sans text-sm max-w-sm mx-auto">
-                            We couldn't find any news articles matching your search query or selected category.
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 text-gray-300 mx-auto mb-4">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                          </svg>
+                          <h3 className="font-display font-bold text-xl text-[#042C53] mb-2">No news available</h3>
+                          <p className="text-gray-500 font-sans text-sm mx-auto">
+                            There are currently no news items available.
                           </p>
                         </motion.div>
                       )}
@@ -385,25 +387,24 @@ const NewsEventsPage = () => {
                     <h2 className="text-xs font-bold uppercase tracking-wider text-[#666666] font-sans">
                       {eventStatus === 'upcoming' ? 'Upcoming Sessions' : eventStatus === 'past' ? 'Completed Sessions' : 'All Sessions'} ({filteredEvents.length})
                     </h2>
-                    
+
                     {/* Status Filter Toggle */}
                     <div className="flex items-center gap-1 bg-gray-100 p-1 rounded-xl w-fit">
                       {['all', 'upcoming', 'past'].map(status => (
                         <button
                           key={status}
                           onClick={() => setEventStatus(status)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-bold font-sans cursor-pointer transition-all ${
-                            eventStatus === status
-                              ? 'bg-white text-[#042C53] shadow-sm'
-                              : 'text-gray-500 hover:text-[#042C53]'
-                          }`}
+                          className={`px-3 py-1.5 rounded-lg text-xs font-bold font-sans cursor-pointer transition-all ${eventStatus === status
+                            ? 'bg-white text-[#042C53] shadow-sm'
+                            : 'text-gray-500 hover:text-[#042C53]'
+                            }`}
                         >
                           {status.charAt(0).toUpperCase() + status.slice(1)}
                         </button>
                       ))}
                     </div>
                   </div>
- 
+
                   <AnimatePresence mode="popLayout">
                     {filteredEvents.length > 0 ? (
                       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -423,7 +424,7 @@ const NewsEventsPage = () => {
                       >
                         <CalendarDays className="w-16 h-16 text-gray-300 mx-auto mb-4" strokeWidth={1.5} />
                         <h3 className="font-display font-bold text-xl text-[#042C53] mb-2">No Events Found</h3>
-                        <p className="text-gray-500 font-sans text-sm max-w-sm mx-auto">
+                        <p className="text-gray-500 font-sans text-sm mx-auto">
                           There are currently no upcoming events listed under the {eventsCategory} category.
                         </p>
                       </motion.div>
