@@ -96,7 +96,7 @@ const MembershipCard = ({ tier, price, sub, buttonLabel, bgImage, onJoinClick, o
       </div>
     </div>
 
-    {/* CTA Button — Overlapping */}
+    {/* CTA Button, Overlapping */}
     <div className="flex justify-center -mt-[24px] relative z-10 px-8 box-border">
       <button
         onClick={() => onJoinClick(tier)}

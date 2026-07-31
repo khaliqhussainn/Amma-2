@@ -16,7 +16,7 @@ const slides = [
     id: 2,
     badge: "Why AMMA",
     headline: "Building the Future of Muslim Healthcare in America",
-    subtext: "Uniting thousands of Muslim physicians and healthcare professionals under one mission — to serve humanity with excellence, compassion, and faith.",
+    subtext: "Uniting thousands of Muslim physicians and healthcare professionals under one mission: to serve humanity with excellence, compassion, and faith.",
     cta: "Become a Premier Member Today",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1080",
     highlights: [

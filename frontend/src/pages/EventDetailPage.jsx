@@ -244,7 +244,7 @@ const EventDetailPage = () => {
                             </p>
                             {block.author && (
                               <p className="mt-4 text-sm font-sans font-bold text-[#042C53]/60 pl-5">
-                                — {block.author}
+                                {block.author}
                               </p>
                             )}
                           </blockquote>

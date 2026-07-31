@@ -6,21 +6,21 @@ const Events = () => {
     {
       title: "Annual National Summit",
       date: "OCT 12-14",
-      description: "Washington D.C. — Shaping the future of faith-based healthcare policy and ethical leadership.",
+      description: "Washington D.C.: Shaping the future of faith-based healthcare policy and ethical leadership.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDyfn-cIyGes7SjVzKwEBgsoO4pjvgXlI5PuIlXsrcIcxhOHf7Gkm6MzEnFyLF0sPMqskCrGgrMJIvqlWe0V1ElOCRN7o5OmuWW0GOHjvnVRJs-DlyJGxKpCfL9ikayS5PWXebP6ASaXtCDUQ_BPgq6_lBGGkdnTOAckzMeUTzOi2gDqOQPTaZS-Do0gTW8LKCSsChAasW5V9MXLiBB5_JH5QxvUYrBNd3pOKLFYFsSSbE3rC9pRO6U-NFGEiMkZl7nGhfM8HJs3_aG",
       linkText: "Register Now"
     },
     {
       title: "Clinical Ethics Series",
       date: "MONTHLY",
-      description: "Virtual Masterclasses — CME-accredited sessions bridging modern medicine with timeless ethics.",
+      description: "Virtual Masterclasses: CME-accredited sessions bridging modern medicine with timeless ethics.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDxnfZ7VTJJwmGrl9A5Y6fMylXlQf6HxCc-HJQymXeDqO9jciMNM6orw6IvODoR1Af6de2v-A2xhoHT2hyImWLiSTIbQNDC_RPF7eGeQ1Tkw2vniYhlpxuQTgD0Gm_ilnD9EZjVflZUtDRPJ4vMf8LH28KxIFINPLJCqzMeS7Rsx-1GGQQrOQdZ9pluqQevGgz9TlxkHEzk0jl_OE0_W0UKrQGYVD64uzCGzKiA66V4rR3yVYHOp9WDvM6uA9yNsk9udbWfoTzBy4Ky",
       linkText: "View Schedule"
     },
     {
       title: "Regional Mixers",
       date: "LOCAL",
-      description: "Nationwide Locations — Strengthening ties through informal networking and local collaboration.",
+      description: "Nationwide Locations: Strengthening ties through informal networking and local collaboration.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBssDttsc_gtZDqHIGx9bmeb0L97WmP9s_kqVaDXzAiPlv9ItE9oxJedQFIjO6DxZJpAPY3G25EBW11ms4bkx8DAiZtiQ_WX7z_7eo8Pjh2vnVMXwLyiANqS-lDeJltzb-bvIT5RMriMkMKg3p2bWb9a4UkV4gR0_FjhT3kDSRj1_6I-RsT9p4ze2GAOJnXagmCKzi-0BrJOdFjeoK9QK6T3-zP_E6yyjKwaxWh5wnl3Uj86NtjWFUEhyy17LT7EpBvZdzH77EbO9cd",
       linkText: "Find Nearest"
     }

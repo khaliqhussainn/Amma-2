@@ -199,7 +199,7 @@ const EventRegistrationModal = ({ event, onClose, onSuccess }) => {
               </span>
             </div>
 
-            {/* Step Indicator — only when not submitted */}
+            {/* Step Indicator, only when not submitted */}
             {!submitted && (
               <div className="flex items-center gap-2 mt-5">
                 {FORM_STEPS.map((label, i) => (
@@ -479,11 +479,11 @@ const EventRegistrationModal = ({ event, onClose, onSuccess }) => {
                       </div>
                       <div>
                         <p className="text-[11px] text-gray-400 font-sans">Specialty</p>
-                        <p className="font-sans font-semibold text-[#042C53] text-sm">{form.specialty || '—'}</p>
+                        <p className="font-sans font-semibold text-[#042C53] text-sm">{form.specialty || 'N/A'}</p>
                       </div>
                       <div className="col-span-2">
                         <p className="text-[11px] text-gray-400 font-sans">Institution</p>
-                        <p className="font-sans font-semibold text-[#042C53] text-sm">{form.institution || '—'}</p>
+                        <p className="font-sans font-semibold text-[#042C53] text-sm">{form.institution || 'N/A'}</p>
                       </div>
                       <div className="col-span-2">
                         <p className="text-[11px] text-gray-400 font-sans">Membership</p>

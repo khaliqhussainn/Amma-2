@@ -29,7 +29,7 @@ const WhatsAppCommunityCard = () => {
         <p className="text-white font-sans font-bold text-base md:text-lg leading-snug">
           {hasAccess
             ? 'Join the AMMA WhatsApp Community'
-            : 'Members-only WhatsApp Community — sign in to access'}
+            : 'Members-only WhatsApp Community. Sign in to access.'}
         </p>
       </div>
 
