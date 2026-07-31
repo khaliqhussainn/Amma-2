@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 const slides = [
   { src: '/Slide-1.png', alt: 'Estimated number of Muslim Healthcare Professionals in the US' },
-  { src: '/Our Vision Within One Year.png', alt: 'Our Vision Within One Year', rounded: true },
+  { src: '/Our Vision Within One Year.png', alt: 'Our Vision Within One Year' },
   { src: '/Slide-2.png', alt: 'Why AMMA - Together We Grow' },
   // { src: '/Slide-3.png', alt: 'Chapters and Specialities' },
   { src: '/Slide-4.png', alt: 'AMMA Timeline' },
@@ -87,8 +87,7 @@ const Hero = ({ onJoinClick }) => {
                 src={s.src}
                 alt={s.alt}
                 draggable={false}
-                className={`w-full h-full object-contain md:object-cover object-center select-none pointer-events-none ${s.rounded ? 'rounded-[32px] md:rounded-[clamp(32px,6vw,88px)]' : ''
-                  }`}
+                className="w-full h-full object-contain md:object-cover object-center select-none pointer-events-none rounded-[32px] md:rounded-[clamp(32px,6vw,88px)]"
               />
             </div>
           ))}
