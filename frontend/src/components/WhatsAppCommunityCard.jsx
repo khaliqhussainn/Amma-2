@@ -38,7 +38,7 @@ const WhatsAppCommunityCard = () => {
           href={WHATSAPP_COMMUNITY_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-10 inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[var(--amma-emerald)] hover:bg-[#026139] text-white font-sans font-bold text-sm whitespace-nowrap transition-colors shrink-0"
+          className="relative z-10 inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#AD1F23] hover:bg-[#911a1d] text-white font-sans font-bold text-sm whitespace-nowrap transition-colors shrink-0"
         >
           Join Now
           <ArrowRight size={16} />
