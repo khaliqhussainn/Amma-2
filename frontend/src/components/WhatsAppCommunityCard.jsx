@@ -14,44 +14,43 @@ const WhatsAppCommunityCard = () => {
   const hasAccess = user && (user.role === 'ADMIN' || user.status === 'APPROVED');
 
   return (
-    <div className="mt-12 max-w-2xl mx-auto rounded-3xl p-8 md:p-10 bg-[var(--amma-emerald)] text-white shadow-xl shadow-emerald-900/10 text-center">
-      <div className="w-14 h-14 rounded-xl mb-6 mx-auto flex items-center justify-center bg-white/20">
-        {hasAccess ? <MessageCircle className="w-7 h-7" /> : <Lock className="w-7 h-7" />}
+    <div
+      className="mt-12 w-full rounded-full relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-4 py-5 px-6 md:py-4 md:px-8 text-center md:text-left"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(4, 44, 83, 0.82), rgba(4, 44, 83, 0.82)), url("/whatsapp-flag-bg.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 relative z-10">
+        <div className="w-11 h-11 rounded-full flex items-center justify-center bg-white/15 shrink-0">
+          {hasAccess ? <MessageCircle className="w-5 h-5 text-white" /> : <Lock className="w-5 h-5 text-white" />}
+        </div>
+        <p className="text-white font-sans font-bold text-base md:text-lg leading-snug">
+          {hasAccess
+            ? 'Join the AMMA WhatsApp Community'
+            : 'Members-only WhatsApp Community — sign in to access'}
+        </p>
       </div>
 
-      <h3 className="text-2xl font-bold mb-3">AMMA WhatsApp Community</h3>
-
       {hasAccess ? (
-        <>
-          <p className="text-white/90 mb-8 font-medium">
-            Connect with fellow AMMA members, stay informed, and join real-time discussions.
-          </p>
-          <a
-            href={WHATSAPP_COMMUNITY_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white font-bold transition-all hover:shadow-xl hover:-translate-y-0.5"
-            style={{ color: 'var(--amma-emerald)' }}
-          >
-            <MessageCircle size={20} />
-            Join WhatsApp Community
-            <ArrowRight size={18} />
-          </a>
-        </>
+        <a
+          href={WHATSAPP_COMMUNITY_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[var(--amma-emerald)] hover:bg-[#026139] text-white font-sans font-bold text-sm whitespace-nowrap transition-colors shrink-0"
+        >
+          Join Now
+          <ArrowRight size={16} />
+        </a>
       ) : (
-        <>
-          <p className="text-white/90 mb-8 font-medium">
-            Members, please sign in to access.
-          </p>
-          <button
-            onClick={() => navigate('/login')}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white font-bold transition-all hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
-            style={{ color: 'var(--amma-emerald)' }}
-          >
-            Sign In
-            <ArrowRight size={18} />
-          </button>
-        </>
+        <button
+          onClick={() => navigate('/login')}
+          className="relative z-10 inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#AD1F23] hover:bg-[#911a1d] text-white font-sans font-bold text-sm whitespace-nowrap transition-colors shrink-0 cursor-pointer"
+        >
+          Sign In
+          <ArrowRight size={16} />
+        </button>
       )}
     </div>
   );
