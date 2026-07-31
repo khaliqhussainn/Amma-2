@@ -2,7 +2,7 @@ export const newsArticles = [
   {
     id: 1,
     slug: 'amma-launches-icna-2026',
-    title: 'AMMA Makes Its Launch at ICNA Convention 2026',
+    title: 'AMMA Launches at ICNA Convention 2026',
     excerpt: 'Launching at one of the largest gatherings of Muslims in North America gave AMMA the opportunity to connect directly with the people it was created to serve. Hundreds of healthcare professionals joined on the spot.',
     category: 'Announcements',
     date: 'May 23–25, 2026',
