@@ -87,8 +87,8 @@ const Hero = ({ onJoinClick }) => {
                 src={s.src}
                 alt={s.alt}
                 draggable={false}
-                className="w-full h-full object-contain md:object-cover object-center select-none pointer-events-none"
-                style={s.rounded ? { borderRadius: '40px' } : undefined}
+                className={`w-full h-full object-contain md:object-cover object-center select-none pointer-events-none ${s.rounded ? 'rounded-[32px] md:rounded-[clamp(32px,6vw,88px)]' : ''
+                  }`}
               />
             </div>
           ))}
