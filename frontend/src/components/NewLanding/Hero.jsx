@@ -64,7 +64,7 @@ const Hero = ({ onJoinClick }) => {
     <section className="w-full bg-white px-[1.8%] pt-[12px] pb-0 box-border flex flex-col gap-[clamp(40px,6vw,80px)]">
       {/* ── Carousel ── */}
       <div
-        className="relative w-full aspect-[4/3] md:aspect-[1390/640] rounded-[32px] md:rounded-[clamp(32px,6vw,88px)] overflow-hidden box-border bg-[radial-gradient(101.25%_101.25%_at_90.36%_5.78%,_#E0ECFC_0%,_#F0F6FD_42%,_#F5F9FD_100%)]"
+        className="relative w-full aspect-[1390/640] rounded-[32px] md:rounded-[clamp(32px,6vw,88px)] overflow-hidden box-border bg-[radial-gradient(101.25%_101.25%_at_90.36%_5.78%,_#E0ECFC_0%,_#F0F6FD_42%,_#F5F9FD_100%)]"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
