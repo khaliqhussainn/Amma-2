@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler');
 const AppError = require('../utils/AppError');
 const SubscriptionPlan = require('../models/subscriptionPlanModel');
 const ExcelJS = require('exceljs');
-const sendEmail = require('../utils/sendEmail');
+const BrevoService = require('../services/brevoService');
 const { pool } = require('../config/db');
 
 // @desc    Get all dashboard data for admin
@@ -44,11 +44,9 @@ const submitContactInquiry = asyncHandler(async (req, res) => {
 
     // Notify admin team in the background (fire-and-forget)
     const ADMIN_EMAILS = ['info@ammanational.org', 'bpiracha@hotmail.com', 'abdur833@yahoo.com'];
-    sendEmail({
-        email: ADMIN_EMAILS[0],
-        cc: ADMIN_EMAILS[1] + ',' + ADMIN_EMAILS[2],
+    BrevoService.sendTransactionalEmail({
+        to:      ADMIN_EMAILS[0],
         subject: `[AMMA Contact] ${subject || 'New Inquiry'} — from ${name}`,
-        message: `New contact inquiry received.\n\nFrom: ${name}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\n\nMessage:\n${message}`,
         html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #eee; border-radius: 10px;">
                 <h2 style="color: #042C53; margin-bottom: 4px;">New Contact Inquiry</h2>
@@ -64,7 +62,8 @@ const submitContactInquiry = asyncHandler(async (req, res) => {
                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
                 <p style="font-size: 11px; color: #aaa;">© 2026 AMMA National Headquarters</p>
             </div>
-        `
+        `,
+        text: `New contact inquiry received.\n\nFrom: ${name}\nEmail: ${email}\nSubject: ${subject || 'N/A'}\n\nMessage:\n${message}`
     }).catch(err => console.error('[ContactInquiry] Admin email failed:', err.message));
 });
 
@@ -141,11 +140,11 @@ const updateMemberStatus = asyncHandler(async (req, res) => {
             }
 
             if (subject) {
-                await sendEmail({
-                    email: member.email,
+                await BrevoService.sendTransactionalEmail({
+                    to:      member.email,
                     subject,
-                    message,
-                    html
+                    html,
+                    text: message
                 });
             }
         }

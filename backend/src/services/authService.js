@@ -2,7 +2,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const UserModel = require('../models/userModel');
 const AppError = require('../utils/AppError');
-const sendEmail = require('../utils/sendEmail');
+const BrevoService = require('./brevoService');
+const verificationEmail  = require('../utils/templates/verificationEmail');
+const forgotPasswordEmail = require('../utils/templates/forgotPasswordEmail');
+const adminMfaEmail       = require('../utils/templates/adminMfaEmail');
+const welcomeEmail        = require('../utils/templates/welcomeEmail');
 
 class AuthService {
     static generateToken(id, remember = false) {
@@ -41,26 +45,15 @@ class AuthService {
                 // Send Email
                 try {
                     console.log(`[TESTING] MFA OTP for ${user.email} is: ${otp}`);
-                    await sendEmail({
-                        email: user.email,
+                    await BrevoService.sendTransactionalEmail({
+                        to:      user.email,
                         subject: 'Admin Login Attempt from New Device',
-                        message: `Your login OTP is: ${otp}. It is valid for 10 minutes.`,
-                        html: `
-                            <div style="font-family: sans-serif; padding: 20px; color: #042C53;">
-                                <h2>Admin Login Attempt</h2>
-                                <p>We detected an admin login attempt from a new device.</p>
-                                <p>Your 6-digit OTP is:</p>
-                                <h1 style="color: #AD1F23; font-size: 32px; letter-spacing: 5px;">${otp}</h1>
-                                <p>This code is valid for <b>10 minutes</b>.</p>
-                                <p>If this was not you, please secure your account immediately.</p>
-                                <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-                                <p style="font-size: 12px; color: #999;">© 2026 American Muslims Medical Association</p>
-                            </div>
-                        `
+                        html:    adminMfaEmail(otp),
+                        text:    `Your admin login OTP is: ${otp}. It is valid for 10 minutes. Do not share this code.`
                     });
                 } catch (error) {
-                    console.error('Email error:', error);
-                    // In a real app we might throw here, but for local testing when SMTP fails we'll proceed
+                    console.error('[Brevo] Admin MFA email error:', error.message);
+                    // Non-fatal: log OTP to console so local dev can proceed
                     console.warn('MFA Email failed to send. Check console for OTP to test locally.');
                 }
 
@@ -144,7 +137,30 @@ class AuthService {
         }
 
         const fullUser = await UserModel.findById(newUserId);
-        
+
+        console.log(`[Registration] Verification & user creation successful for email: ${email} (ID: ${newUserId})`);
+
+        // Synchronize contact to Brevo in background (non-blocking)
+        BrevoService.syncContact(fullUser).catch(err => {
+            console.error('[Brevo Sync Async Error]:', err.message);
+        });
+
+        // Send Welcome Email via Brevo Transactional API
+        try {
+            console.log(`[Registration] Calling Welcome Email for ${email}`);
+            console.log(`[Registration] Preparing Brevo Payload...`);
+            const brevoRes = await BrevoService.sendTransactionalEmail({
+                to:      email,
+                subject: 'Welcome to AMMA National',
+                html:    welcomeEmail(name),
+                text:    `Welcome to AMMA National, ${name}! Your account has been created successfully.`
+            });
+            console.log(`[Registration] Brevo Response:`, brevoRes);
+            console.log(`[Registration] Welcome Email Sent Successfully to ${email}`);
+        } catch (emailErr) {
+            console.error(`[Registration] Error sending welcome email to ${email}:`, emailErr.message);
+        }
+
         // Don't issue token if pending
         const token = (fullUser.role === 'ADMIN' || fullUser.status === 'APPROVED') 
             ? this.generateToken(newUserId) 
@@ -175,25 +191,17 @@ class AuthService {
         // The frontend will pass it back to the register endpoint.
         
         try {
-            await sendEmail({
-                email: email,
-                subject: 'Verify Your Email - AMMA Registration',
-                message: `Your verification code is: ${otp}.`,
-                html: `
-                    <div style="font-family: sans-serif; padding: 20px; color: #042C53;">
-                        <h2>Email Verification</h2>
-                        <p>Thank you for starting your registration with AMMA.</p>
-                        <p>Your 6-digit verification code is:</p>
-                        <h1 style="color: #AD1F23; font-size: 32px; letter-spacing: 5px;">${otp}</h1>
-                        <p>Please enter this code in the registration form to continue.</p>
-                        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-                        <p style="font-size: 12px; color: #999;">© 2026 American Muslims Medical Association</p>
-                    </div>
-                `
+            console.log(`[Registration OTP] Generating OTP for ${email}...`);
+            await BrevoService.sendTransactionalEmail({
+                to:      email,
+                subject: 'Verify Your Email Address',
+                html:    verificationEmail(otp),
+                text:    `Your AMMA registration verification code is: ${otp}. It expires in 10 minutes. Do not share this code.`
             });
+            console.log(`[Registration OTP] Verification email sent successfully to ${email}`);
             return otp;
         } catch (error) {
-            console.error('Registration OTP Email error:', error);
+            console.error('[Registration OTP] Verification email error:', error.message);
             throw new AppError(`Error sending verification email: ${error.message}`, 500);
         }
     }
@@ -212,27 +220,16 @@ class AuthService {
 
         // Send Email
         try {
-            await sendEmail({
-                email: user.email,
-                subject: 'Your AMMA Password Reset OTP',
-                message: `Your password reset OTP is: ${otp}. It is valid for 5 minutes.`,
-                html: `
-                    <div style="font-family: sans-serif; padding: 20px; color: #042C53;">
-                        <h2>Password Reset Request</h2>
-                        <p>You requested to reset your password for the AMMA Membership Portal.</p>
-                        <p>Your 6-digit OTP is:</p>
-                        <h1 style="color: #AD1F23; font-size: 32px; letter-spacing: 5px;">${otp}</h1>
-                        <p>This code is valid for <b>5 minutes</b>.</p>
-                        <p>If you did not request this, please ignore this email.</p>
-                        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-                        <p style="font-size: 12px; color: #999;">© 2026 American Muslims Medical Association</p>
-                    </div>
-                `
+            await BrevoService.sendTransactionalEmail({
+                to:      user.email,
+                subject: 'Reset Your Password',
+                html:    forgotPasswordEmail(otp),
+                text:    `Your AMMA password reset OTP is: ${otp}. It is valid for 5 minutes. Do not share this code.`
             });
         } catch (error) {
-            // If email fails, clear the OTP
+            // Roll back OTP if email delivery fails
             await UserModel.updateResetOtp(user.id, null, null);
-            console.error('Email error:', error);
+            console.error('[Brevo] Forgot password email error:', error.message);
             throw new AppError('There was an error sending the email. Try again later.', 500);
         }
 
