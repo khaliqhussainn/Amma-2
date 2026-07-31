@@ -9,7 +9,7 @@ export const newsArticles = [
     readTime: '3 min read',
     author: 'AMMA Communications Team',
     authorTitle: 'AMMA National',
-    image: '/news/amma-icna-2026-launch.jpg',
+    image: '/news/amma-icna-2026-launch.jpeg',
     featured: true,
     content: [
       {
