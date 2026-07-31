@@ -88,7 +88,7 @@ const Hero = ({ onJoinClick }) => {
                 alt={s.alt}
                 draggable={false}
                 className="w-full h-full object-contain md:object-cover object-center select-none pointer-events-none"
-                style={s.rounded ? { borderRadius: '25px' } : undefined}
+                style={s.rounded ? { borderRadius: '40px' } : undefined}
               />
             </div>
           ))}
