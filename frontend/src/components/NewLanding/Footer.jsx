@@ -133,7 +133,7 @@ const Footer = () => {
               { label: 'Donate', href: 'https://charitystack.com/donate/2b78c2eb-b329-4f23-a4e3-61088b0e1bde' },
               { label: 'Specialities', href: '/specialties' },
               { label: 'Chapters', href: '/chapters' },
-              { label: 'Pricing Plans', href: '/membership-info' }
+              { label: 'Events Calendar', href: '/news-events' }
             ]}
           />
           <Col
@@ -141,7 +141,7 @@ const Footer = () => {
             links={[
               { label: 'About Us', href: '/about' },
               { label: 'Meet Our Team', href: '#' },
-              { label: 'Blog / Insights', href: '#' },
+              { label: 'News & Events', href: '/news-events' },
               { label: 'FAQs', href: '#' },
               { label: 'Contact', href: '/contact' }
             ]}

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 const slides = [
   { src: '/Slide-1.png', alt: 'Estimated number of Muslim Healthcare Professionals in the US' },
   { src: '/Slide-2.png', alt: 'Why AMMA - Together We Grow' },
-  { src: '/Slide-3.png', alt: 'Chapters and Specialities' },
+  // { src: '/Slide-3.png', alt: 'Chapters and Specialities' },
   { src: '/Slide-4.png', alt: 'AMMA Timeline' },
 ];
 

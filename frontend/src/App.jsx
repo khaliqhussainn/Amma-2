@@ -16,6 +16,11 @@ import AdminDashboard from './pages/AdminDashboard';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import PendingApprovalPage from './pages/PendingApprovalPage';
+import NewsPage from './pages/NewsPage';
+import NewsDetailPage from './pages/NewsDetailPage';
+import EventsPage from './pages/EventsPage';
+import NewsEventsPage from './pages/NewsEventsPage';
+import EventDetailPage from './pages/EventDetailPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -45,6 +50,11 @@ function App() {
         <Route path="/specialties" element={<SpecialtiesPage />} />
         <Route path="/membership-info" element={<MembershipInfoPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/news/:slug" element={<NewsDetailPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/:slug" element={<EventDetailPage />} />
+        <Route path="/news-events" element={<NewsEventsPage />} />
         <Route path="/pending-approval" element={<PendingApprovalPage />} />
         <Route path="/member/dashboard" element={<MemberDashboard />} />
         <Route path="/member-dashboard" element={<MemberDashboard />} />
