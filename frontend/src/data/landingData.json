@@ -1,0 +1,317 @@
+{
+  "navbar": {
+    "logo": "AMMA",
+    "links": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Programs",
+        "href": "#programs"
+      },
+      {
+        "label": "Events",
+        "href": "#events"
+      },
+      {
+        "label": "Stories",
+        "href": "#stories"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Log In",
+        "variant": "secondary",
+        "href": "#"
+      },
+      {
+        "label": "Become a Member",
+        "variant": "primary",
+        "href": "#"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "Watch Our 2026 Vision Video",
+    "title": "Uniting Muslim Health Professionals Across America.",
+    "subtitle": "Empowering clinicians, researchers, and students through faith, excellence, and service.",
+    "primaryBtn": {
+      "label": "Become a Member",
+      "href": "#"
+    },
+    "secondaryBtn": {
+      "label": "Support Our Mission",
+      "href": "#"
+    },
+    "backgroundImage": "https://images.unsplash.com/photo-1720180246107-cf498760f1de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+  },
+  "stats": [
+    {
+      "value": "15,000+",
+      "label": "Members Nationwide",
+      "color": "text-[#0D9488]"
+    },
+    {
+      "value": "42",
+      "label": "Chapters Across US",
+      "color": "text-[#2563EB]"
+    },
+    {
+      "value": "2.5M+",
+      "label": "Healthcare Lives Impacted",
+      "color": "text-[#0D9488]"
+    },
+    {
+      "value": "$4.2M",
+      "label": "Scholarships Awarded",
+      "color": "text-[#2563EB]"
+    }
+  ],
+  "about": {
+    "tag": "Our Mission",
+    "title": "Excellence Guided by Faith.",
+    "description": [
+      "The American Muslim Medical Association (AMMA) fosters professional growth, ethical practice, and community service among Muslim healthcare professionals in the United States.",
+      "We provide a unified voice for our members, advocating for health equity, providing mentorship to the next generation, and delivering humanitarian medical relief to those in need—driven by the core Islamic values of compassion and healing."
+    ],
+    "image": "https://images.unsplash.com/photo-1760074032600-36943c264fbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "badge": {
+      "title": "Est. 1998",
+      "subtitle": "Decades of Excellence"
+    },
+    "cta": {
+      "label": "Read Our Complete Story",
+      "href": "#"
+    }
+  },
+  "programs": {
+    "tag": "What We Do",
+    "title": "Impactful Programs",
+    "description": "From local clinics to global missions, AMMA provides structured initiatives that empower our members to make a tangible difference.",
+    "items": [
+      {
+        "title": "Mentorship & Residency Support",
+        "description": "Guiding the next generation of Muslim medical professionals through competitive matching and career planning.",
+        "image": "https://images.unsplash.com/photo-1758270705067-0d7edee57af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Medical Missions & Global Relief",
+        "description": "Organizing dedicated clinical teams to provide free medical care in underserved regions worldwide.",
+        "image": "https://images.unsplash.com/photo-1618509651313-2f5f09f8716e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "icon": "Globe"
+      },
+      {
+        "title": "Advocacy & Policy Research",
+        "description": "Providing a unified voice on healthcare policies that impact our communities and patients.",
+        "image": "https://images.unsplash.com/photo-1560439513-74b037a25d84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "icon": "Stethoscope"
+      },
+      {
+        "title": "Continuing Medical Education",
+        "description": "Accredited CME courses and webinars to keep our members at the forefront of clinical excellence.",
+        "image": "https://images.unsplash.com/photo-1584800081828-a413c50d1aaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "icon": "Award"
+      }
+    ]
+  },
+  "events": {
+    "tag": "Community & Growth",
+    "title": "Upcoming Events",
+    "description": "Join us for our annual convention, regional networking mixers, and virtual CME webinars to connect and learn.",
+    "items": [
+      {
+        "date": {
+          "month": "Aug",
+          "day": "15"
+        },
+        "location": "Chicago, IL",
+        "title": "2026 AMMA Annual Convention",
+        "description": "Our flagship event featuring keynote speakers, research symposiums, and a grand banquet.",
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      },
+      {
+        "date": {
+          "month": "Sep",
+          "day": "05"
+        },
+        "location": "New York City, NY",
+        "title": "East Coast Regional Mixer",
+        "description": "An evening of networking for medical professionals and students in the tri-state area.",
+        "image": "https://images.unsplash.com/photo-1701848053420-adcc206a63a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      },
+      {
+        "date": {
+          "month": "Oct",
+          "day": "12"
+        },
+        "location": "Virtual Session",
+        "title": "Ethics in Modern Medicine",
+        "description": "Accredited CME webinar covering contemporary bioethics from an Islamic perspective.",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      }
+    ]
+  },
+  "honors": {
+    "tag": "Honors",
+    "title": "Celebrating Excellence.",
+    "description": "AMMA members consistently set the standard for clinical excellence and compassionate care. Each year, we recognize outstanding contributors to healthcare and community service.",
+    "awards": [
+      {
+        "title": "Ibn Sina Lifetime Achievement",
+        "description": "Awarded for decades of transformative clinical research and mentorship.",
+        "icon": "Award",
+        "color": "bg-[#2563EB]/20",
+        "textColor": "text-[#2563EB]"
+      },
+      {
+        "title": "Community Healing Award",
+        "description": "Recognizing extraordinary efforts in free clinics and local health equity.",
+        "icon": "Heart",
+        "color": "bg-[#0D9488]/20",
+        "textColor": "text-[#0D9488]"
+      }
+    ],
+    "testimonial": {
+      "quote": "Winning this award reflects the collective effort of my entire team dedicated to serving our community with ihsan (excellence).",
+      "author": "Dr. Sarah Rahman",
+      "designation": "2025 Honoree",
+      "authorImage": "https://images.unsplash.com/photo-1623854766464-c3645e6841d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "bgImage": "https://images.unsplash.com/photo-1764874298962-ac0c84307fc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    }
+  },
+  "testimonials": {
+    "title": "Voices of AMMA",
+    "items": [
+      {
+        "quote": "AMMA's mentorship program was crucial during my residency match. Having seasoned Muslim professionals to guide me through the nuances of the process was invaluable. I am now at my top-choice hospital.",
+        "author": "Dr. Omar Khalid",
+        "role": "Resident Physician, Johns Hopkins",
+        "image": "https://images.unsplash.com/photo-1616851273103-5f0ec44e546f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      },
+      {
+        "quote": "Through AMMA's global relief trips, I found a profoundly meaningful way to give back. The network of supportive peers and mentors here has completely transformed my approach to medical leadership.",
+        "author": "Dr. Fatima Al-Sayed",
+        "role": "Chief of Surgery, Cedar Sinai",
+        "image": "https://images.unsplash.com/photo-1623854766464-c3645e6841d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      }
+    ]
+  },
+  "chapters": {
+    "title": "Find Your Local Chapter",
+    "description": "With 42 active chapters across the United States, there is a community of AMMA professionals near you. Connect locally to amplify our national impact.",
+    "cta": "Explore Chapter Directory"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Have questions about membership or donations? We've got answers.",
+    "questions": [
+      {
+        "question": "Who is eligible for membership?",
+        "answer": "Membership is open to all Muslim healthcare professionals, including physicians, nurses, researchers, and medical students studying in the USA."
+      },
+      {
+        "question": "How are donations utilized?",
+        "answer": "Donations fund our global medical missions, student scholarships, community health clinics, and operational costs for educational events."
+      },
+      {
+        "question": "Can medical students join?",
+        "answer": "Yes, we have dedicated student chapters and heavily discounted membership tiers to support your journey."
+      },
+      {
+        "question": "Is AMMA affiliated with specific hospitals?",
+        "answer": "No, AMMA is an independent professional organization, though our members work in top institutions nationwide."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Make a Difference?",
+    "subtitle": "Join thousands of Muslim healthcare professionals dedicated to excellence in practice, advocacy, and compassion.",
+    "buttons": [
+      {
+        "label": "Join AMMA Today",
+        "variant": "primary",
+        "href": "#"
+      },
+      {
+        "label": "Make a Donation",
+        "variant": "outline",
+        "href": "#"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Empowering Muslim healthcare professionals across the United States through unity, faith, and clinical excellence.",
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "sections": [
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "#"
+          },
+          {
+            "label": "Leadership",
+            "href": "#"
+          },
+          {
+            "label": "Programs",
+            "href": "#"
+          },
+          {
+            "label": "Events",
+            "href": "#"
+          },
+          {
+            "label": "Contact",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Take Action",
+        "links": [
+          {
+            "label": "Become a Member",
+            "href": "#",
+            "highlight": true
+          },
+          {
+            "label": "Donate",
+            "href": "#",
+            "highlight": true
+          },
+          {
+            "label": "Find a Chapter",
+            "href": "#"
+          },
+          {
+            "label": "Volunteer",
+            "href": "#"
+          },
+          {
+            "label": "Mentorship Portal",
+            "href": "#"
+          }
+        ]
+      }
+    ],
+    "copyright": "© 2026 American Muslim Medical Association. All rights reserved.",
+    "legal": [
+      {
+        "label": "Privacy Policy",
+        "href": "#"
+      },
+      {
+        "label": "Terms of Service",
+        "href": "#"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "about": {
+    "title": "About AMMA",
+    "subtitle": "Advancing Health, Guided by Faith.",
+    "mission": "To foster professional growth, ethical practice, and community service among Muslim healthcare professionals in the United States, providing a unified voice for excellence and compassion.",
+    "vision": "A future where Muslim healthcare professionals lead the way in clinical excellence, ethical innovation, and health equity for all communities.",
+    "history": "Founded in 1998 by a small group of visionary physicians in Chicago, AMMA has grown into a nationwide network of over 15,000 members across 42 chapters.",
+    "values": [
+      {
+        "title": "Ihsan (Excellence)",
+        "description": "Striving for the highest quality in clinical care and professional conduct."
+      },
+      {
+        "title": "Rahma (Compassion)",
+        "description": "Treating every patient with empathy and dignity, as a reflection of our faith."
+      },
+      {
+        "title": "Unity",
+        "description": "Fostering a supportive network for professionals at every stage of their career."
+      },
+      {
+        "title": "Service",
+        "description": "Dedication to humanitarian relief and local community health outreach."
+      }
+    ]
+  },
+  "chapters": {
+    "title": "Local Chapters",
+    "subtitle": "Connecting Professionals in Your Community.",
+    "description": "AMMA operates through a vibrant network of regional chapters, each serving as a hub for local networking, mentorship, and community service.",
+    "list": [
+      {
+        "name": "Chicago Chapter",
+        "location": "Illinois",
+        "members": "1,200+",
+        "head": "Dr. Ahmed Hassan"
+      },
+      {
+        "name": "New York Tri-State",
+        "location": "New York / NJ",
+        "members": "2,500+",
+        "head": "Dr. Sarah Mansour"
+      },
+      {
+        "name": "Houston Chapter",
+        "location": "Texas",
+        "members": "950+",
+        "head": "Dr. Omar Farooq"
+      },
+      {
+        "name": "Los Angeles Chapter",
+        "location": "California",
+        "members": "1,100+",
+        "head": "Dr. Fatima Zahra"
+      },
+      {
+        "name": "Washington D.C.",
+        "location": "DC / Maryland / VA",
+        "members": "1,800+",
+        "head": "Dr. Bilal Qureshi"
+      },
+      {
+        "name": "Florida Gulf Coast",
+        "location": "Florida",
+        "members": "600+",
+        "head": "Dr. Layla Ibrahim"
+      }
+    ]
+  },
+  "specialties": {
+    "title": "Specialty Sections",
+    "subtitle": "Expertise Shared Within Our Network.",
+    "description": "AMMA hosts dedicated specialty sections where professionals can share research, discuss complex cases, and collaborate on specialty-specific health initiatives.",
+    "items": [
+      {
+        "name": "Cardiology",
+        "count": "450+ Members",
+        "icon": "Heart"
+      },
+      {
+        "name": "Pediatrics",
+        "count": "620+ Members",
+        "icon": "Baby"
+      },
+      {
+        "name": "Internal Medicine",
+        "count": "1,200+ Members",
+        "icon": "Clipboard"
+      },
+      {
+        "name": "Oncology",
+        "count": "310+ Members",
+        "icon": "Activity"
+      },
+      {
+        "name": "Obstetrics & Gynecology",
+        "count": "400+ Members",
+        "icon": "Users"
+      },
+      {
+        "name": "Mental Health",
+        "count": "350+ Members",
+        "icon": "Brain"
+      }
+    ]
+  },
+  "membershipInfo": {
+    "title": "Membership Benefits",
+    "subtitle": "Invest in Your Future and Your Community.",
+    "description": "Joining AMMA is more than a professional credential—it's a commitment to growth, networking, and service.",
+    "benefits": [
+      {
+        "title": "Networking",
+        "description": "Connect with thousands of Muslim professionals for referrals and collaboration."
+      },
+      {
+        "title": "Mentorship",
+        "description": "Get guided by seasoned experts or mentor the next generation of students."
+      },
+      {
+        "title": "Continuing Education",
+        "description": "Access accredited CME webinars and discounts on our annual conventions."
+      },
+      {
+        "title": "Global Impact",
+        "description": "Priority access to join our international medical relief missions."
+      },
+      {
+        "title": "Advocacy",
+        "description": "Have a seat at the table in health policy discussions affecting our communities."
+      }
+    ],
+    "tiers": [
+      {
+        "name": "Physicians & Dentists",
+        "price": "Free",
+        "bestFor": "MD, DO, DDS, DMD & more",
+        "description": "Includes Physicians (MD/DO), Dentists (DDS/DMD), Podiatrists (DPM), Optometrists (OD), Veterinarians (DVM), and International physicians/dentists.",
+        "inclusions": [
+          "Physicians (MD/DO)",
+          "Dentists (DDS/DMD)",
+          "Podiatrists (DPM)",
+          "Optometrists (OD)",
+          "Veterinarians (DVM)",
+          "International physicians/dentists"
+        ]
+      },
+      {
+        "name": "Other Licensed Healthcare Professionals",
+        "price": "Free",
+        "bestFor": "Clinical Care Professionals",
+        "description": "Advanced Practice Providers and licensed allied health clinicians across multiple disciplines.",
+        "inclusions": [
+          "Nurse Practitioners (NP)",
+          "Physician Assistants (PA)",
+          "Registered Nurses (RN/LVN/LPN)",
+          "Pharmacists",
+          "Physical & Occupational Therapists",
+          "Speech-Language Pathologists",
+          "Audiologists",
+          "Psychologists & Counselors",
+          "Respiratory Therapists",
+          "Paramedics/EMTs"
+        ]
+      },
+      {
+        "name": "Allied Staff",
+        "price": "Free",
+        "bestFor": "Administrative & Public Health Experts",
+        "description": "Non-licensed or administrative/support healthcare professionals driving health equity.",
+        "inclusions": [
+          "Healthcare Administrators",
+          "Epidemiologists",
+          "Public Health Professionals",
+          "Medical Assistants",
+          "Clinical Researchers",
+          "Health IT Professionals",
+          "Social Workers",
+          "Community Health Workers",
+          "Medical Interpreters"
+        ]
+      },
+      {
+        "name": "Trainees & Students",
+        "price": "Free",
+        "bestFor": "The Future of Healthcare",
+        "description": "Special access for the next generation of healthcare leaders in training.",
+        "inclusions": [
+          "Residents & Fellows",
+          "Medical Students",
+          "Dental Students",
+          "Nursing Students",
+          "PA/NP/Pharmacy Students",
+          "Premedical Students"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're Here to Help.",
+    "description": "Have questions about membership, events, or donations? Reach out to our national headquarters or your local chapter.",
+    "info": {
+      "address": "123 Medical Plaza, Suite 500, Chicago, IL 60601",
+      "phone": "+1 (312) 555-AMMA",
+      "email": "info@ammanational.org",
+      "hours": "Mon-Fri: 9:00 AM - 5:00 PM CST"
+    }
+  }
+}
