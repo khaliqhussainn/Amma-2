@@ -41,6 +41,11 @@ export const newsArticles = [
         text: "For many attendees, ICNA 2026 was their first introduction to AMMA's mission: to unite and empower Muslim healthcare professionals through professional development, mentorship, advocacy, and service — guided by the values of Ihsan, Rahma, unity, and service."
       },
       {
+        type: 'quote',
+        text: "To unite and empower Muslim healthcare professionals through professional development, spiritual growth, mentorship, advocacy, collaboration, and service to humanity, guided by the teachings of Islam and dedicated to seeking the pleasure of Allah.",
+        author: 'AMMA Mission Statement'
+      },
+      {
         type: 'list',
         items: [
           'Ihsan (Excellence) — Striving for the highest quality in clinical care and professional conduct.',
