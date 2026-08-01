@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Globe, MapPin, Navigation, Loader2 } from 'lucide-react';
 import api from '../utils/api';
 import toast from 'react-hot-toast';
+import WhatsAppCommunityCard from '../components/WhatsAppCommunityCard';
 
 const ChaptersPage = () => {
   const navigate = useNavigate();
@@ -102,6 +103,8 @@ const ChaptersPage = () => {
                 {loading ? 'Processing...' : 'Notify Me'}
               </button>
             </form>
+
+            <WhatsAppCommunityCard />
           </motion.div>
         </motion.div>
       </main>

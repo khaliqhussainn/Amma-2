@@ -251,7 +251,7 @@ const NewsEventsPage = () => {
               </div>
             </div>
 
-            {/* Search — only for news tab */}
+            {/* Search, only for news tab */}
             {/* <AnimatePresence>
               {isNews && (
                 <motion.div

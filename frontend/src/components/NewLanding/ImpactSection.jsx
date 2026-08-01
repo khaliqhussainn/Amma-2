@@ -78,7 +78,7 @@ const ImpactSection = () => {
                 <span className="text-secondary">Greater Impact.</span>
               </h2>
               <p className="text-on-surface-variant text-body-md leading-relaxed font-sans max-w-2xl">
-                By collaborating with trusted humanitarian organizations, AMMA empowers Muslim healthcare professionals to serve communities beyond hospitals and clinics—creating meaningful impact through medical expertise, volunteerism, advocacy, and compassionate care.
+                By collaborating with trusted humanitarian organizations, AMMA empowers Muslim healthcare professionals to serve communities beyond hospitals and clinics, creating meaningful impact through medical expertise, volunteerism, advocacy, and compassionate care.
               </p>
             </div>
 
