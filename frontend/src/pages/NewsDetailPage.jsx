@@ -235,6 +235,22 @@ const NewsDetailPage = () => {
                         </blockquote>
                       );
                     }
+                    if (block.type === 'image') {
+                      return (
+                        <figure key={index} className="my-8">
+                          <img
+                            src={block.src}
+                            alt={block.alt || ''}
+                            className="w-full rounded-2xl object-cover"
+                          />
+                          {block.caption && (
+                            <figcaption className="mt-3 text-sm text-gray-500 font-sans text-center">
+                              {block.caption}
+                            </figcaption>
+                          )}
+                        </figure>
+                      );
+                    }
                     if (block.type === 'list') {
                       return (
                         <ul key={index} className="space-y-3 my-4">
