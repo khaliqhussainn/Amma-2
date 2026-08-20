@@ -1,5 +1,86 @@
 export const newsArticles = [
   {
+    id: 2,
+    slug: 'amma-president-meets-senator-van-hollen',
+    title: 'Advocacy in Action: AMMA President Meets Senator Chris Van Hollen',
+    excerpt: 'Dr. Mohsin Ansari, AMMA President and ICNA Vice President of Governmental Affairs, met with Senator Chris Van Hollen to present a recognition award and raise urgent humanitarian concerns, including the crisis in Gaza and the case of Dr. Hussam Abu Safiya.',
+    category: 'Humanitarian',
+    date: 'August 20, 2026',
+    readTime: '4 min read',
+    author: 'AMMA Communications Team',
+    authorTitle: 'AMMA National',
+    image: '/news/amma-van-hollen-award.jpg',
+    featured: false,
+    content: [
+      {
+        type: 'intro',
+        text: "Alhamdulillah. Dr. Mohsin Ansari, President of the American Muslim Medical Association and Vice President of Governmental Affairs at the Islamic Circle of North America (ICNA), met with Senator Van Hollen to discuss pressing humanitarian and healthcare concerns affecting the American Muslim community and people around the world. He also presented a recognition award on behalf of ICNA."
+      },
+      {
+        type: 'paragraph',
+        text: "The award recognizes Senator Van Hollen's courageous leadership, commitment to justice, and continued support for issues of importance to the American Muslim community. Dr. Ansari also discussed ICNA's contributions to American society and its continued efforts in serving communities across the country."
+      },
+      {
+        type: 'image',
+        src: '/news/amma-van-hollen-group.jpg',
+        alt: 'Dr. Mohsin Ansari and community leaders present a recognition award to Senator Chris Van Hollen',
+        caption: 'Dr. Mohsin Ansari and fellow community leaders present Senator Chris Van Hollen with an ICNA Congressional Leadership Award.'
+      },
+      {
+        type: 'heading',
+        text: 'Addressing the Humanitarian Crisis in Gaza'
+      },
+      {
+        type: 'paragraph',
+        text: 'A significant part of the discussion focused on the ongoing humanitarian crisis in Gaza and the devastating impact on its healthcare system and medical professionals.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Dr. Ansari highlighted the severe challenges facing healthcare workers and the urgent need to protect medical personnel. He urged Senator Van Hollen to continue his leadership and advocacy on behalf of the people of Gaza and to support efforts toward humanitarian relief, justice, and peace.'
+      },
+      {
+        type: 'paragraph',
+        text: 'As an organization representing Muslim healthcare professionals, AMMA remains deeply concerned about the circumstances faced by healthcare workers during the ongoing crisis and believes that medical professionals must be protected and allowed to fulfill their essential role of caring for patients.'
+      },
+      {
+        type: 'heading',
+        text: 'Advocacy for Dr. Hussam Abu Safiya'
+      },
+      {
+        type: 'paragraph',
+        text: "Another urgent issue raised during the meeting was the case of Dr. Hussam Abu Safiya, whose continued detention and reported continued deterioration in health remain deeply concerning."
+      },
+      {
+        type: 'paragraph',
+        text: "Dr. Ansari urged Senator Van Hollen to intensify efforts to help secure Dr. Abu Safiya's immediate release. His case also reflects broader concerns regarding the safety and treatment of healthcare professionals affected by the conflict."
+      },
+      {
+        type: 'paragraph',
+        text: 'By bringing these concerns directly to policymakers, AMMA continues to advocate for the protection of healthcare workers and the preservation of humanitarian principles.'
+      },
+      {
+        type: 'heading',
+        text: 'A Commitment to Continued Engagement'
+      },
+      {
+        type: 'paragraph',
+        text: 'We are grateful to Senator Van Hollen for his accessibility, sincere engagement, and willingness to listen to the concerns raised during the meeting.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The meeting reflects the importance of continued engagement between healthcare professionals, community representatives, and policymakers in addressing humanitarian concerns and advocating for justice and peace.'
+      },
+      {
+        type: 'paragraph',
+        text: 'AMMA remains committed to advocating for healthcare workers, supporting humanitarian causes, and engaging constructively with policymakers on issues affecting the dignity, safety, and well-being of communities.'
+      },
+      {
+        type: 'quote',
+        text: 'May Allah (SWT) guide us all to continue striving for justice, compassion, and peace for all.'
+      }
+    ]
+  },
+  {
     id: 1,
     slug: 'amma-launches-icna-2026',
     title: 'AMMA Launches at ICNA Convention 2026',
